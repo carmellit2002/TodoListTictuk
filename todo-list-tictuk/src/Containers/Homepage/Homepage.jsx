@@ -1,10 +1,11 @@
 import React from "react";
+import { HomepageContainer } from "./styles";
 import TasksList from "../TasksList";
 
 const Homepage = () => {
-    return <div>
+    return <HomepageContainer>
         <TasksList />
-    </div>
+    </HomepageContainer>
 }
 
 export default Homepage;
