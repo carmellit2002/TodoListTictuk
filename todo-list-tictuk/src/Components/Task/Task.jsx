@@ -7,10 +7,10 @@ import DeleteTaskIcon from "../../Assets/DeleteTask.png";
 
 import { categoryToImage } from "./categoryToImage";
 
-const Task = ({ title, category, completionStatus }) => {
+const Task = ({ id, title, category, completionStatus, onStatusClick }) => {
     return <TaskContainer>
         <TaskDetailsContainer>
-            <CompletionStatus src={completionStatus ? Complete : Incomplete} />
+            <CompletionStatus src={completionStatus ? Complete : Incomplete} onClick={() => onStatusClick(id)} />
             <CategoryIcon src={categoryToImage[category]} />
             <TextDetails>
                 <Category> {category} </Category>
