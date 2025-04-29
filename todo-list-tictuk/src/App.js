@@ -1,7 +1,10 @@
+import React from "react";
+import Homepage from "./Containers/Homepage";
+
 function App() {
   return (
     <div className="App">
-      Hello
+      <Homepage />
     </div>
   );
 }
