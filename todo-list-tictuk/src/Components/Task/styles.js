@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TaskContainer = styled.div`
-    height: 8%;
-    width: 30%;
+    height: 10%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@ export const TaskActionsContainer = styled.div`
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 
     padding: 8px 12px 8px 12px;

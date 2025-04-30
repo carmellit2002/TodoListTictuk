@@ -5,4 +5,8 @@ export const HomepageContainer = styled.div`
     width: 100vw;
 
     font-family: 'Inter';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
