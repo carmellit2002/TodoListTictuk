@@ -27,8 +27,8 @@ const TasksList = ({ categoryFilter }) => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        // Fetch tasks from Local Storage or something.
-        setTasks(tempTasks);
+        const localStorageTasks = localStorage.getItem('tasks');
+        setTasks(localStorageTasks ? JSON.parse(localStorageTasks) : []);
     }, [])
 
     const onStatusClick = (randomGeneratedID) => {
