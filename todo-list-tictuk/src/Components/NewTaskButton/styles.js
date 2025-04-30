@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const NewTaskClickable = styled.button`
-    height: 50%;
-    width: 90%;
+export const NewTaskClickable = styled(Link)`
+    height: 35%;
+    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -16,6 +17,8 @@ export const NewTaskClickable = styled.button`
     background-color: #5F33E1;
 
     cursor: pointer;
+
+    text-decoration: none;
 `;
 
 export const ButtonText = styled.div`
@@ -23,4 +26,5 @@ export const ButtonText = styled.div`
 
     font-size: 16px;
     color: #FFFFFF;
+
 `;

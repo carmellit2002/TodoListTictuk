@@ -53,7 +53,7 @@ export const TaskActionsContainer = styled.div`
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     padding: 8px 12px 8px 12px;
