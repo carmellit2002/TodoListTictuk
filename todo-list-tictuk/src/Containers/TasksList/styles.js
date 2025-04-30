@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const TasksListContainer = styled.div`
-    height: 65%;
-    width: 30%;
+    height: 90%;
+    width: 100%;
 
     display: flex;
-    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 
     margin-top: 50px;
+
+    .task:not(:last-child) {
+        margin-bottom: 5px;
+    }
 `;
