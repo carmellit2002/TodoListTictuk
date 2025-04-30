@@ -21,7 +21,7 @@ const Task = ({ id, title, category, completionStatus, onStatusClick, onTaskEdit
             <EditTaskButton
                 type="image"
                 src={EditTaskIcon}
-                onClick={onTaskEdit}
+                onClick={() => onTaskEdit(id)}
             />
             <DeleteTaskButton
                 type="image"
