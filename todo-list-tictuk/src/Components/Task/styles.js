@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TaskContainer = styled.div`
-    height: 8%;
-    width: 30%;
+    height: 10%;
+    width: 100%;
 
     display: flex;
     align-items: center;
