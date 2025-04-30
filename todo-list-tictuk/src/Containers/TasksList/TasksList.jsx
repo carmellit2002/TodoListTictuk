@@ -8,10 +8,22 @@ const tempTasks = [
         title: "This is a test title",
         category: "Shop",
         completionStatus: false,
+    },
+    {
+        id: "randomGeneratedID2",
+        title: "Test no. 2",
+        category: "Shop",
+        completionStatus: true,
+    },
+    {
+        id: "randomGeneratedID3",
+        title: "Pets test!",
+        category: "Pets",
+        completionStatus: false,
     }
 ]
 
-const TasksList = () => {
+const TasksList = ({ categoryFilter }) => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
@@ -28,13 +40,15 @@ const TasksList = () => {
     }
 
     return <TasksListContainer>
-        {tasks.map((task) => <Task 
-            id={task.id}
-            title={task.title}
-            category={task.category}
-            completionStatus={task.completionStatus}
-            onStatusClick={onStatusClick}
-        />)}
+        {tasks.map((task) => 
+            (!categoryFilter || categoryFilter === task.category) && <Task 
+                id={task.id}
+                title={task.title}
+                category={task.category}
+                completionStatus={task.completionStatus}
+                onStatusClick={onStatusClick}
+            />)
+        }
     </TasksListContainer>
 }
 

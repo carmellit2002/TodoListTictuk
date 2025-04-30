@@ -5,7 +5,12 @@ export const TasksListContainer = styled.div`
     width: 100%;
 
     display: flex;
-    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 
     margin-top: 50px;
+
+    .task:not(:last-child) {
+        margin-bottom: 5px;
+    }
 `;
