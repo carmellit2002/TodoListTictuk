@@ -9,14 +9,14 @@ const CategoryDropdownFilter = ({ onCategorySelect }) => {
     return <FilterSelector
         placeholder={"Filter"}
         options={optionElements}
-        onChange={(option) => onCategorySelect(option.value)}
-        formatOptionLabel={({ value, label }) => {
-            console.log(value, label);
-            return <SelectorOption>
+        isClearable={true}
+        onChange={(option) => onCategorySelect(option ? option.value : null)}
+        formatOptionLabel={
+            ({ value, label }) => <SelectorOption>
                 <SelectableCategoryIcon src={categoryToImage[value]} />
                 <SelectableText> {label} </SelectableText>
             </SelectorOption>
-        }}
+        }
     />
 }
 
