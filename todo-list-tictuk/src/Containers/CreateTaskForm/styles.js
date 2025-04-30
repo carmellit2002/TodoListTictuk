@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
 export const FormContainer = styled.div`
     height: 65%;
@@ -9,6 +10,30 @@ export const FormContainer = styled.div`
     align-content: center;
 
     margin-top: 50px;
+`;
+
+export const BackButton = styled(Link)`
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+    cursor: pointer;
+`;
+
+export const BackIcon = styled.img`
+
+`;
+
+export const BackText = styled.div`
+    color: #000000;
+    font-size: 14px;
+`;
+
+export const FormTitle = styled.div`
+    margin: 40px 0px 20px 0px;
+    font-weight: 600;
 `;
 
 export const TitleInput = styled.input`
