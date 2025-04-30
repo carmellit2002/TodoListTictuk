@@ -1,18 +1,10 @@
 import React from "react";
 import { FilterSelector, SelectorOption, SelectableCategoryIcon, SelectableText } from "./styles";
+import { createOptionElements } from "./utils";
 import { categoryToImage } from "../Task/categoryToImage";
 
 const CategoryDropdownFilter = ({ onCategorySelect }) => {
-
-    const createOptionElements = () => {
-        return Object.keys(categoryToImage).map((category) =>
-            ({
-                value: category,
-                label: category
-            })
-        )
-    }
-    const optionElements = createOptionElements();
+    const optionElements = createOptionElements(categoryToImage);
 
     return <FilterSelector
         placeholder={"Filter"}
