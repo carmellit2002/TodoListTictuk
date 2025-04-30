@@ -7,7 +7,10 @@ const HomepageContent = () => {
     const [categoryFilter, setCategoryFilter] = useState();
 
     return <HomepageContentContainer>
-        <CategoryDropdownFilter onCategorySelect={setCategoryFilter} />
+        <CategoryDropdownFilter
+            placeholder={"Filter"}
+            onCategorySelect={setCategoryFilter}
+        />
         <TasksList categoryFilter={categoryFilter} />
     </HomepageContentContainer>
 }

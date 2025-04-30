@@ -3,7 +3,7 @@ import AddNew from "../../Assets/AddNew.png";
 import { NewTaskClickable, ButtonText } from "./styles";
 
 const NewTaskButton = () => {
-    return <NewTaskClickable to="/newTask">
+    return <NewTaskClickable to="/createTask">
         <img src={AddNew} />
         <ButtonText> New Task </ButtonText>
     </NewTaskClickable>

@@ -3,11 +3,11 @@ import { FilterSelector, SelectorOption, SelectableCategoryIcon, SelectableText 
 import { createOptionElements } from "./utils";
 import { categoryToImage } from "../Task/categoryToImage";
 
-const CategoryDropdownFilter = ({ onCategorySelect }) => {
+const CategoryDropdownFilter = ({ placeholder, onCategorySelect }) => {
     const optionElements = createOptionElements(categoryToImage);
 
     return <FilterSelector
-        placeholder={"Filter"}
+        placeholder={placeholder || "Filter"}
         options={optionElements}
         isClearable={true}
         onChange={(option) => onCategorySelect(option ? option.value : null)}
