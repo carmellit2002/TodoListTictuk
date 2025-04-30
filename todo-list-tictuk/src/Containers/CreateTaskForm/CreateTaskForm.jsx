@@ -18,7 +18,7 @@ const CreateTaskForm = () => {
             category: category,
             completionStatus: completionStatus
         }
-        const existingTasks = localStorage.getItem('tasks');
+        const existingTasks = JSON.parse(localStorage.getItem('tasks'));
         localStorage.setItem('tasks', JSON.stringify(existingTasks ? [...existingTasks, newTask] : [newTask]))
     }
 
