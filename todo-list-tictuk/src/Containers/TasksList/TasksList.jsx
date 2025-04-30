@@ -2,27 +2,6 @@ import React, { useState, useEffect } from "react";
 import { TasksListContainer } from "./styles";
 import Task from "../../Components/Task";
 
-const tempTasks = [
-    {
-        id: "randomGeneratedID",
-        title: "This is a test title",
-        category: "Shop",
-        completionStatus: false,
-    },
-    {
-        id: "randomGeneratedID2",
-        title: "Test no. 2",
-        category: "Shop",
-        completionStatus: true,
-    },
-    {
-        id: "randomGeneratedID3",
-        title: "Pets test!",
-        category: "Pets",
-        completionStatus: false,
-    }
-]
-
 const TasksList = ({ categoryFilter }) => {
     const [tasks, setTasks] = useState([]);
 
@@ -37,6 +16,17 @@ const TasksList = ({ categoryFilter }) => {
         updatedTasks[foundTaskIndex].completionStatus = !updatedTasks[foundTaskIndex].completionStatus;
         
         setTasks(updatedTasks);
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks))
+    }
+
+    const onTaskEdit = (id) => {
+
+    }
+
+    const onTaskDelete = (id) => {
+        const tasksExcludingGivenId = tasks.filter((task) => task.id !== id);
+        setTasks(tasksExcludingGivenId);
+        localStorage.setItem('tasks', JSON.stringify(tasksExcludingGivenId))
     }
 
     return <TasksListContainer>
@@ -47,6 +37,7 @@ const TasksList = ({ categoryFilter }) => {
                 category={task.category}
                 completionStatus={task.completionStatus}
                 onStatusClick={onStatusClick}
+                onTaskDelete={onTaskDelete}
             />)
         }
     </TasksListContainer>
