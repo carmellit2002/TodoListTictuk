@@ -5,8 +5,6 @@ export const HomepageContainer = styled.div`
     width: 100vw;
     max-width: 100%;
 
-    font-family: 'Inter';
-
     display: flex;
     flex-direction: column;
     align-items: center;

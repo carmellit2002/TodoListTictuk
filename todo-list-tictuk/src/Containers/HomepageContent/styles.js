@@ -8,5 +8,5 @@ export const HomepageContentContainer = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    margin-top: 50px;
+    margin: 50px 0px 20px 0px;
 `;

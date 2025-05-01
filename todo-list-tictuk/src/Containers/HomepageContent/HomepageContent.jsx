@@ -10,6 +10,7 @@ const HomepageContent = () => {
         <CategoryDropdownFilter
             placeholder={"Filter"}
             onCategorySelect={setCategoryFilter}
+            defaultCategory={categoryFilter}
         />
         <TasksList categoryFilter={categoryFilter} />
     </HomepageContentContainer>

@@ -8,9 +8,11 @@ export const TasksListContainer = styled.div`
     align-content: center;
     flex-direction: column;
 
-    margin-top: 50px;
-
+    margin-top: 20px;
+    
     .task:not(:last-child) {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
+
+    overflow-y: scroll;
 `;
